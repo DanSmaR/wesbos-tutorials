@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recreating Codepen!</title>
+    <script src="https://kit.fontawesome.com/398aca86ed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,21 +13,24 @@
     <div class="codepen">
         <header class="pen">
             <div class="pen__details">
-                <h1>Some Amazing Pen Name</h1>
-                <p class="pen__author">A Pen by DanSmaR</p>
+                <h1>Some Amazing Pen Name <i class="fas fa-pen"></i></h1>
+                <div class="pen__author">
+                    <p><span style="color: #939DA8; font-size: 0.8em;">A PEN BY</span> DanSmaR</p>
+                </div>
             </div>
-            <button class="button button--dirty">☁ Save</button>
-            <button class="button">☁ Save As Private</button>
-            <button class="button">⚙ Settings</button>
+            <button class="button button--dirty"><i class="fas fa-cloud"></i> Save</button>
+            <button class="button"><i class="fas fa-cog"></i> Settings</button>
             <button class="button">👀 Change View</button>
-            <img src="image/perfilFoto.png" alt="Danilo Martins Photo profile" height="44">
+            <button class="button pin--button"><i class="fas fa-thumbtack"></i> <i
+                    class="fas fa-chevron-down"></i></button>
+            <img src="image/perfilFoto.png" alt="Danilo Martins Photo profile" height="47">
         </header>
         <section class="code">
             <div class="editor">
                 <header class="editor__header">
-                    <button class="button button--small editor__settings">⚙</button>
+                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
                     <h3 class="editor__heading">HTML</h3>
-                    <button class="button button-small editor__settings">ᐯ</button>
+                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
                 </header>
                 <div class="editor__code">
                     <div class="editor__gutter"><span class="editor__number">1</span></div>
@@ -35,9 +39,9 @@
             </div>
             <div class="editor">
                 <header class="editor__header">
-                    <button class="button button--small editor__settings">⚙</button>
+                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
                     <h3 class="editor__heading">CSS</h3>
-                    <button class="button button--small editor__settings">ᐯ</button>
+                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
                 </header>
                 <div class="editor__code">
                     <div class="editor__gutter">
@@ -45,16 +49,16 @@
                         <span class="editor__number">2</span>
                         <span class="editor__number">3</span>
                     </div>
-                    <textarea class="editor__input"><code>.codepen { 
+                    <textarea class="editor__input">.codepen { 
                         is: cool;
-                    }</code></textarea>
+                    }</textarea>
                 </div>
             </div>
             <div class="editor">
                 <header class="editor__header">
-                    <button class="button button--small editor__settings">⚙</button>
+                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
                     <h3 class="editor__heading">JS</h3>
-                    <button class="button button--small editor__settings">ᐯ</button>
+                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
                 </header>
                 <div class="editor__code">
                     <div class="editor__gutter">
@@ -64,11 +68,14 @@
                 </div>
             </div>
         </section>
-        <section class="preview"><iframe src="" frameborder="0"></iframe></section>
+        <section class="preview">
+            <p>How would you React if I said I love Vue?</p>
+            <!-- <iframe src="https://css-tricks.com" frameborder="0"></iframe> -->
+        </section>
         <footer class="settings">
-            <button class="button button--small button--black">Console</button>
-            <button class="button button--small button--black">Assets</button>
-            <button class="button button--small button--black">⌘</button>
+            <button class="button button--small button--black">Console
+            </button><button class="button button--small button--black">Assets
+            </button><button class="button button--small button--black">Shortcuts</button>
         </footer>
     </div>
 </body>
