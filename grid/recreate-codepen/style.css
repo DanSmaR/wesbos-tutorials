@@ -96,6 +96,8 @@ h3.editor__heading {
     line-height: 18px;
 }
 
+/* Console ----------------------------------------------------------------------------------------------------------*/
+
 .preview {
     flex: 1 0 200px;
     display: grid;
@@ -109,7 +111,7 @@ h3.editor__heading {
     color: #ADAFBC;
 }
 
-/* Pen Header */
+/* Pen Header --------------------------------------------------------------------------------------------------------*/
 
 .pen {
     display: flex;
@@ -135,6 +137,19 @@ h3.editor__heading {
     z-index: 3;
     padding: 10px;
 }
+
+/* This rule below applies a yellow stripe on top of the header buttons */
+
+/* .pen .button.button--dirty::before {
+    background: #ffc600;
+    display: block;
+    content: '';
+    height: 2px;
+    width: calc(100% - 6px);
+    position: absolute;
+    left: 3px;
+    top: 3px;
+} */
 
 .button--header>* {
     margin-left: 10px;
@@ -263,7 +278,7 @@ h3.editor__heading {
     }
 }
 
-/* Buttons */
+/* Buttons ------------------------------------------------------------------------------------------------------------*/
 
 .button {
     background: var(--grey);
@@ -280,16 +295,6 @@ h3.editor__heading {
     background: #5A6074;
 }
 
-/* .pen .button.button--dirty::before {
-    background: #ffc600;
-    display: block;
-    content: '';
-    height: 2px;
-    width: calc(100% - 6px);
-    position: absolute;
-    left: 3px;
-    top: 3px;
-} */
 
 .button--small {
     font-size: 12px;
@@ -317,7 +322,7 @@ h3.editor__heading {
     z-index: 2;
 }
 
-/* footer */
+/* footer -------------------------------------------------------------------------------------------------------------*/
 
 .footer--settings {
     background: #333642;
@@ -371,3 +376,6 @@ h3.editor__heading {
 .button--black:hover {
     background: #1e1f26;
 }
+
+/* media queries --------------------------------------------------------------------------------------------------*/
+
