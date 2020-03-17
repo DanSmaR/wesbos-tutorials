@@ -21,7 +21,7 @@
             </div>
             <div class="button--header">
                 <div class="invisible--button"></div>
-                <button class="button toggle--button"><i class="fas fa-bars"></i><i
+                <button class="button toggle--header--button"><i class="fas fa-bars"></i><i
                     class="fas fa-chevron-down"></i></button>
                 
                 <ul>
@@ -95,14 +95,16 @@
     <script>
 
         $(function () {
-            $('.toggle--button').on('click', function () {
+            $('.toggle--header--button').on('click', function () {
                 $('.button--header ul').toggleClass('open');
+                $('.toggle--header--button .fas.fa-chevron-down').toggleClass('fa-rotate-180');
             });
         });
 
         $(function () {
             $('.toggle--footer--button').on('click', function () {
                 $('.footer--settings ul').toggleClass('open');
+                $('.toggle--footer--button .fas.fa-chevron-up').toggleClass('fa-rotate-180');
             });
         });
 
