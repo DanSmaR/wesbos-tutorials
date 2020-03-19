@@ -35,8 +35,9 @@ a {
     display: flex;
     flex-direction: column;
     /* grid-gap: 5px; */
-    height: 100vh;
+    min-height: 100vh;
     color: #ffffff;
+    position: relative;
 }
 
 /* Editor---------------------------------------------mobile first----------------------------------------------- */
@@ -330,7 +331,10 @@ h3.editor__heading {
         display: flex;
         flex-flow: column-reverse;
         align-items: flex-start;
-        position: relative;
+        position: sticky;
+        bottom: 0;
+        align-self: stretch;
+        
     }
     .footer--settings ul {
         list-style: none;
@@ -399,6 +403,7 @@ h3.editor__heading {
     }
     .footer--settings {
         grid-area: 3 / 1 / 4 / -1;
+
     }
     .button.button--dirty {
         background: #1E1F26;
@@ -616,6 +621,9 @@ h3.editor__heading {
         grid-area: 4 / 1 / 5 / -1;
         background: #333642;
         border-top: 1px solid rgb(109, 110, 116);
+        position: sticky;
+        bottom: 0;
+        align-self: stretch;
     }
     .footer--settings ul {
         margin: 0;
