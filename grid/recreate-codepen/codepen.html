@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreating Codepen!</title>
+    <script src="https://kit.fontawesome.com/398aca86ed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="codepen">
+        <header class="pen">
+            <p><a href="https://codepen.io" target="blank"><i class="fab fa-codepen"></i></a></p>
+            <div class="pen__details">
+                <h1>Some Amazing Pen Name <a href="#"><i class="fas fa-pen"></i></a></h1>
+                <div class="pen__author">
+                    <p><span>A PEN BY</span> <a href="https://codepen.io/DanSmaR" target="blank"> DanSmaR</a></p>
+                </div>
+            </div>
+            <div class="button--header">
+                <div class="invisible--button"></div>
+                <button class="button toggle--header--button"><i class="fas fa-bars"></i><i
+                    class="fas fa-chevron-down"></i></button>
+                
+                <ul>
+                    <button class="button button--dirty"><i class="fas fa-cloud"></i><span class="button--text"> Save</span></button>
+                    <button class="button button--dirty"><i class="fas fa-cog"></i><span class="button--text"> Settings</span></button>
+                    <button class="button button--dirty ">👀 <span class="button--text">Change View</span></button>
+                    <button class="button pin--button"><i class="fas fa-thumbtack"></i> <i
+                            class="fas fa-chevron-down"></i></button>
+                </ul>
+                <img src="image/perfilFoto-47w.png" class="image" alt="Danilo Martins Photo profile">
+            </div>
+        </header>
+        <section class="code">
+            <div class="editor">
+                <header class="editor__header">
+                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
+                    <h3 class="editor__heading">HTML</h3>
+                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
+                </header>
+                <div class="editor__code">
+                    <div class="editor__gutter"><span class="editor__number">1</span></div>
+                    <textarea class="editor__input"><p>Oh Hey There!</p></textarea>
+                </div>
+            </div>
+            <div class="editor">
+                <header class="editor__header">
+                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
+                    <h3 class="editor__heading">CSS</h3>
+                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
+                </header>
+                <div class="editor__code">
+                    <div class="editor__gutter">
+                        <span class="editor__number">1</span>
+                        <span class="editor__number">2</span>
+                        <span class="editor__number">3</span>
+                    </div>
+                    <textarea class="editor__input">.codepen { 
+    is: cool;
+}</textarea>
+                </div>
+            </div>
+            <div class="editor">
+                <header class="editor__header">
+                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
+                    <h3 class="editor__heading">JS</h3>
+                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
+                </header>
+                <div class="editor__code">
+                    <div class="editor__gutter">
+                        <span class="editor__number">1</span>
+                    </div>
+                    <textarea class="editor__input">const DanSmaR = 'coolest';</textarea>
+                </div>
+            </div>
+        </section>
+        <section class="preview">
+            <p>How would you React if I said I love Vue?</p>
+            <!-- <iframe src="https://css-tricks.com" frameborder="0"></iframe> -->
+        </section>
+        <footer class="footer--settings">
+            <button class="button button--small toggle--footer--button"><i class="fas fa-chevron-up"></i></button>
+            <ul>
+                <button class="button button--small button--black">Console
+                </button><button class="button button--small button--black">Assets
+                </button><button class="button button--small button--black">Shortcuts</button>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script>
+
+        $(function () {
+            $('.toggle--header--button').on('click', function () {
+                $('.button--header ul').toggleClass('open');
+                $('.toggle--header--button .fas.fa-chevron-down').toggleClass('fa-rotate-180');
+            });
+        });
+
+        $(function () {
+            $('.toggle--footer--button').on('click', function () {
+                $('.footer--settings ul').toggleClass('open');
+                $('.toggle--footer--button .fas.fa-chevron-up').toggleClass('fa-rotate-180');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
