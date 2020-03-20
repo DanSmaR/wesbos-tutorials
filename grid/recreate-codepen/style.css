@@ -546,8 +546,21 @@ h3.editor__heading {
     .invisible--button {
         display: none;
     }
+    .button--header ul.open {
+        display: flex;
+        flex-direction: row;
+        position: initial;
+    }
     .button--header ul {
         display: block;
+    }
+    .button--header ul.open>* {
+        margin-left: 5px;
+        flex: auto;
+    }
+    .button--header>* {
+        margin-left: 5px;
+        flex: auto;
     }
     .button--header ul>* {
         margin-bottom: 0px;
