@@ -672,7 +672,7 @@ h3.editor__heading {
     }
 }
 
-/* -------------------------start of media querie header buttons for screens between 768px and 990px --------------------- */
+/* -------------------------start of media querie for header buttons for screens between widths 768px and 990px --------------------- */
 
 @media (min-width: 768px) and (max-width:900px) {
     .button--text {
