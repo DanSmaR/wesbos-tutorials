@@ -137,7 +137,7 @@ h3.editor__heading {
 
 /* This rule below applies a yellow stripe on top of the header buttons */
 
-/* .pen .button.button--dirty::before {
+.pen .button.button--dirty:first-child::before {
     background: #ffc600;
     display: block;
     content: '';
@@ -146,7 +146,7 @@ h3.editor__heading {
     position: absolute;
     left: 3px;
     top: 3px;
-} */
+}
 
 .button--header>* {
     margin-left: 5px;
