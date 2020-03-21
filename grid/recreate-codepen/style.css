@@ -441,6 +441,21 @@ h3.editor__heading {
         border-right: 1px solid rgb(109, 110, 116);
         font-size: 0.7em;
     }
+    
+        .button--header ul.open {
+        display: flex;
+        flex-direction: row;
+        position: initial;
+    }
+    
+        .button--header ul.open>* {
+        margin-left: 5px;
+        flex: auto;
+    }
+    .button--header>* {
+        margin-left: 5px;
+        flex: auto;
+    }
 }
 
 /* ----------------- End of rules to footer on screens with min-width: 768px and max-height: 440px------------------ */
