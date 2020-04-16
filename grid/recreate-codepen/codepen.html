@@ -24,7 +24,7 @@
             </div>
             <div class="pen__btn">
                 <div class="is-hidden-btn"></div>
-                <button class="btn toggle--header--btn js-btn--toggler"><i class="fas fa-bars"></i><i
+                <button class="btn toggle--header--btn js-pen__btn--toggle"><i class="fas fa-bars"></i><i
                         class="fas fa-chevron-down"></i></button>
 
                 <ul class="pen__dropdown-btn js-pen__dropdown-btn">
@@ -109,7 +109,7 @@
 
         <!------------------------------------------------- footer start ------------------------------------------------>
         <footer class="footer--settings">
-            <button class="btn btn--small toggle--footer--btn"><i class="fas fa-chevron-up"></i></button>
+            <button class="btn btn--small toggle--footer--btn js-foot__btn--toggle"><i class="fas fa-chevron-up"></i></button>
             <ul>
                 <button class="btn btn--small btn--black">Console
                 </button><button class="btn btn--small btn--black">Assets
@@ -126,16 +126,16 @@
     <script>
 
         $(function () {
-            $('.toggle--header--btn').on('click', function () {
+            $('.js-pen__btn--toggle').on('click', function () {
                 $('.js-pen__dropdown-btn').toggleClass('is-open');
-                $('.toggle--header--btn .fas.fa-chevron-down').toggleClass('fa-rotate-180');
+                $('.js-pen__btn--toggle .fas.fa-chevron-down').toggleClass('fa-rotate-180');
             });
         });
 
         $(function () {
-            $('.toggle--footer--btn').on('click', function () {
+            $('.js-foot__btn--toggle').on('click', function () {
                 $('.footer--settings ul').toggleClass('open');
-                $('.toggle--footer--btn .fas.fa-chevron-up').toggleClass('fa-rotate-180');
+                $('.js-foot__btn--toggle .fas.fa-chevron-up').toggleClass('fa-rotate-180');
             });
         });
 
