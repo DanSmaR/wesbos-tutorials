@@ -17,7 +17,6 @@ html {
 
 body {
     margin: 0;
-    min-width: 325px;
 }
 
 h1, h2, h3 h4, h5, h6 {
@@ -31,14 +30,210 @@ a {
     text-decoration: none;
 }
 
-.codepen {
-    display: flex;
-    flex-direction: column;
-    /* grid-gap: 5px; */
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.l-codepen {
+    min-width: 325px;
     min-height: 100vh;
     color: #ffffff;
-    position: relative;
+    position: relative; 
 }
+
+    .l-codepen--mobileFirst {
+        display: flex;
+        flex-direction: column; 
+    }
+
+/* Pen Header -----------------------------------------mobile first---------------------------------------------------------------*/
+
+.l-pen--flex {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    flex: 0 0 auto;
+}
+
+.u-zIndex {
+    z-index: 2;
+}    
+
+
+.pen {
+    background: #1E1F26;
+    /* border-bottom: 5px solid var(--grey); */
+    color: #ffffff;
+}
+
+    .pen__logo {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 10px 5px;
+    }
+
+    .pen__details {
+        margin-left: 0px;
+        padding: 10px 0px;
+    }
+
+    .pen__author {
+        margin: 0;
+        font-size: 0.7em;
+    }
+
+    .pen__author span {
+        color: #939DA8;
+        font-size: 0.8em;
+    }
+
+    .pen__btn {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        padding: 0px;
+    }
+
+        .is-hidden-btn {
+            position: absolute;
+            width: 45px;
+            height: 44px;
+            padding: 0;
+            margin: 0;
+            z-index: 2;
+            top: -8px;
+            left: 1px;
+            background: #1E1F26;
+        }
+
+        .pen__dropdown-btn {
+            margin: 0;
+            display: none;
+            list-style: none;
+        }
+        
+        .js-pen__dropdown-btn.is-open {
+            z-index: -1;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: 0;
+            right: 53%;
+            top: 40px;
+            align-items: stretch;
+            animation-name: 'button-header-open';
+            animation-duration: 0.6s;
+        }
+        
+        @keyframes button-header-open {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+            .js-pen__dropdown-btn.is-open > * {
+                flex: 1 1 auto;
+                margin-bottom: 0.3em;
+            }
+
+/* This rule below applies a yellow stripe on top of the header buttons */
+
+/* .pen .button.button--dirty::before {
+    background: #ffc600;
+    display: block;
+    content: '';
+    height: 2px;
+    width: calc(100% - 6px);
+    position: absolute;
+    left: 3px;
+    top: 3px;
+} */
+
+    .pen__profile-img {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .fas.fa-pen:hover, .fas.fa-pen:focus {
+        opacity: 0.8;
+        animation-name: fa-pen;
+        animation-duration: 0.6s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes fa-pen {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(20deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        75% {
+            transform: rotate(-20deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+/* Buttons ----------------------------------------mobile first---------------------------------------------------*/
+
+.btn {
+    background: var(--grey);
+    border: 0;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+    background: #5A6074;
+}
+
+.btn--text {
+    display: none;
+}
+
+.btn--small {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.pen .btn .fas {
+    color: #ADAFBC;
+}
+
+.pin--btn {
+    background: #1E1F26;
+    border: 2px solid #444857;
+    padding: 8px 7px;
+    font-size: 0.8em;
+    display: flex;
+}
+
+.toggle--header--btn {
+    background: #1E1F26;
+    border: 2px solid #444857;
+    padding: 8px 8px;
+    font-size: 0.8em;
+    z-index: 2;
+}
+
 
 /* Editor---------------------------------------------mobile first----------------------------------------------- */
 
@@ -109,194 +304,11 @@ h3.editor__heading {
     color: #ADAFBC;
 }
 
-/* Pen Header -----------------------------------------mobile first---------------------------------------------------------------*/
-
-.pen {
-    display: flex;
-    align-items: center;
-    background: #1E1F26;
-    /* border-bottom: 5px solid var(--grey); */
-    color: #ffffff;
-    padding: 0px;
-    flex: 0 0 auto;
-    z-index: 2;
-}
-
-.button--text {
-    display: none;
-}
-
-.button--header {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 3;
-    padding: 0px;
-}
-
-/* This rule below applies a yellow stripe on top of the header buttons */
-
-/* .pen .button.button--dirty::before {
-    background: #ffc600;
-    display: block;
-    content: '';
-    height: 2px;
-    width: calc(100% - 6px);
-    position: absolute;
-    left: 3px;
-    top: 3px;
-} */
-
-.button--header>* {
-    margin-left: 5px;
-    flex: auto;
-}
-
-.invisible--button {
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    margin: 0;
-    z-index: 2;
-    top: -8px;
-    left: 2px;
-    background: #1E1F26;
-}
-
-.button--header .image {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
-}
-
-.button--header ul {
-    margin: 0;
-    display: none;
-    list-style: none;
-}
-
-.button--header ul.open {
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 51%;
-    top: 40px;
-    align-items: stretch;
-    animation-name: 'button-header-open';
-    animation-duration: 0.6s;
-}
-
-@keyframes button-header-open {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.button--header ul>* {
-    flex: 1 1 auto;
-    margin-bottom: 5px;
-}
-
-.pen>p {
-    font-size: 1em;
-    margin: 0;
-    padding: 10px 5px;
-}
-
-.pen__author>p {
-    margin: 0;
-    font-size: 0.7em;
-}
-
-.pen__author>p>span {
-    color: #939DA8;
-    font-size: 0.8em;
-}
-
-.pen__details {
-    margin-left: 0px;
-    padding: 10px 0px;
-}
-
-.fas.fa-pen:hover, .fas.fa-pen:focus {
-    opacity: 0.8;
-    animation-name: pen;
-    animation-duration: 0.6s;
-    animation-iteration-count: 1;
-}
-
-@keyframes pen {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(20deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(-20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-/* Buttons ----------------------------------------mobile first---------------------------------------------------*/
-
-.button {
-    background: var(--grey);
-    border: 0;
-    color: #ffffff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 15px;
-    position: relative;
-    cursor: pointer;
-}
-
-.button:hover, .button:focus {
-    background: #5A6074;
-}
-
-.button--small {
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 2px;
-}
-
-.pen .button .fas {
-    color: #ADAFBC;
-}
-
-.pin--button {
-    background: #1E1F26;
-    border: 2px solid #444857;
-    padding: 8px 7px;
-    font-size: 0.8em;
-    display: flex;
-}
-
-.toggle--header--button {
-    background: #1E1F26;
-    border: 2px solid #444857;
-    padding: 8px 6px;
-    font-size: 0.8em;
-    z-index: 2;
-}
-
 /*start of rules about button configurations for mobile-first design ----------------------------------------------- */
 
 @media (max-width: 767px) {
     /*-------------------------------------- header--buttons -----------------------------------------------------------*/
-    .button--dirty:nth-child(1):hover::after, .button--dirty:nth-child(1):focus::after {
+    .btn--dirty:nth-child(1):hover::after, .btn--dirty:nth-child(1):focus::after {
         content: "Save";
         position: absolute;
         top: 0;
@@ -305,7 +317,7 @@ h3.editor__heading {
         border-radius: 3px;
         background: #5A6074;
     }
-    .button--dirty:nth-child(2):hover::after, .button--dirty:nth-child(2):focus::after {
+    .btn--dirty:nth-child(2):hover::after, .btn--dirty:nth-child(2):focus::after {
         content: "Settings";
         position: absolute;
         top: 0;
@@ -314,7 +326,7 @@ h3.editor__heading {
         border-radius: 3px;
         background: #5A6074;
     }
-    .button--dirty:nth-child(3):hover::after, .button--dirty:nth-child(3):focus::after {
+    .btn--dirty:nth-child(3):hover::after, .btn--dirty:nth-child(3):focus::after {
         content: "Change View";
         position: absolute;
         top: 0;
@@ -361,19 +373,19 @@ h3.editor__heading {
             top: 0%;
         }
     }
-    .button--small.toggle--footer--button {
+    .btn--small.toggle--footer--btn {
         z-index: 1;
         padding: 3px 24px;
         font-size: 1.2em;
     }
-    .button--black {
+    .btn--black {
         color: #ADAFBC;
         padding: 8px;
         background: #333642;
         /* border-right: 1px solid rgb(109, 110, 116); */
         font-size: 0.7em;
     }
-    .button--black:hover, .button--black:focus {
+    .btn--black:hover, .btn--black:focus {
         background: #1e1f26;
     }
 }
@@ -389,7 +401,7 @@ h3.editor__heading {
         margin: 0;
         min-width: 500px;
     }
-    .codepen {
+    .l-codepen--\@md {
         display: grid;
         grid-template-columns: minmax(220px, 1fr) 1.5fr;
         grid-template-rows: auto 1fr auto;
@@ -407,10 +419,10 @@ h3.editor__heading {
     .footer--settings {
         grid-area: 3 / 1 / 4 / -1;
     }
-    .button.button--dirty {
+    .btn.btn--dirty {
         background: #1E1F26;
     }
-    .button.button--dirty:hover, .button.button--dirty:focus {
+    .btn.btn--dirty:hover, .btn.btn--dirty:focus {
         background: #5A6074;
     }
 }
@@ -434,7 +446,7 @@ h3.editor__heading {
         margin: 0;
         padding: 0;
     }
-    .button--black {
+    .btn--black {
         color: #ADAFBC;
         padding: 8px;
         background: #333642;
@@ -476,13 +488,11 @@ h3.editor__heading {
         color: #ffffff;
         text-decoration: none;
     }
-    .codepen {
+    .l-codepen--\@lg {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto minmax(300px, 2fr) 1fr auto;
         /* grid-gap: 5px; */
-        min-height: 100vh;
-        color: #ffffff;
     }
     /* Editor -------------------------------------------@media (min-width: 768px)-------------------------------- */
     .code {
@@ -543,13 +553,13 @@ h3.editor__heading {
         color: #ffffff;
         padding: 0px;
     }
-    .invisible--button {
+    .invisible--btn {
         display: none;
     }
-    .button--header ul {
+    .btn--header ul {
         display: block;
     }
-    .button--header ul>* {
+    .btn--header ul>* {
         margin-bottom: 0px;
     }
     .pen>p {
@@ -589,7 +599,7 @@ h3.editor__heading {
             transform: rotate(0deg);
         }
     }
-    .button--header .image {
+    .btn--header .image {
         width: 47px;
         height: 47px;
     }
@@ -605,7 +615,7 @@ h3.editor__heading {
         color: #ADAFBC;
     }
     /* Buttons ----------------------------------@media (min-width: 768px)----------------------------------- */
-    .button {
+    .btn {
         background: var(--grey);
         border: 0;
         color: #ffffff;
@@ -615,37 +625,37 @@ h3.editor__heading {
         position: relative;
         cursor: pointer;
     }
-    .toggle--header--button {
+    .toggle--header--btn {
         display: none;
         padding: 0;
         margin: 0;
     }
-    .button:hover, .button:focus {
+    .btn:hover, .btn:focus {
         background: #5A6074;
     }
-    .pen .button--dirty:hover, .pen .button--dirty:focus {
+    .pen .btn--dirty:hover, .pen .btn--dirty:focus {
         padding: 12px 17px;
         border: 3px solid var(--grey);
     }
-    .button--small {
+    .btn--small {
         font-size: 12px;
         padding: 2px 6px;
         border-radius: 2px;
     }
-    .pen .button .fas {
+    .pen .btn .fas {
         color: #ADAFBC;
     }
-    .pin--button {
+    .pin--btn {
         display: initial;
         background: #1E1F26;
         border: 2px solid #444857;
         padding: 13px 10px;
     }
-    .button--text {
+    .btn--text {
         display: initial;
     }
     /* footer ------------------------------------@media (min-width: 768px)--------------------------------------------*/
-    .button--small.toggle--footer--button {
+    .btn--small.toggle--footer--button {
         display: none;
     }
     .footer--settings {
@@ -660,14 +670,14 @@ h3.editor__heading {
         margin: 0;
         padding: 0;
     }
-    .button--black {
+    .btn--black {
         color: #ADAFBC;
         padding: 8px;
         background: #333642;
         border-right: 1px solid rgb(109, 110, 116);
         font-size: 0.7em;
     }
-    .button--black:hover, .button--black:focus {
+    .btn--black:hover, .btn--black:focus {
         background: #1e1f26;
     }
 }
@@ -675,10 +685,10 @@ h3.editor__heading {
 /* -------------------------start of media querie for header buttons for screens between widths 768px and 990px --------------------- */
 
 @media (min-width: 768px) and (max-width:900px) {
-    .button--text {
+    .btn--text {
         display: none;
     }
-    .button--dirty:nth-child(1):hover::after, .button--dirty:nth-child(1):focus::after {
+    .btn--dirty:nth-child(1):hover::after, .btn--dirty:nth-child(1):focus::after {
         content: "Save";
         position: absolute;
         top: 0;
@@ -687,10 +697,10 @@ h3.editor__heading {
         border-radius: 3px;
         background: #5A6074;
     }
-    .button--dirty:nth-child(2):hover, .button--dirty:nth-child(2):focus {
+    .btn--dirty:nth-child(2):hover, .btn--dirty:nth-child(2):focus {
         margin-left: 57px;
     }
-    .button--dirty:nth-child(2):hover::after, .button--dirty:nth-child(2):focus::after {
+    .btn--dirty:nth-child(2):hover::after, .btn--dirty:nth-child(2):focus::after {
         content: "Settings";
         position: absolute;
         top: 0;
@@ -699,10 +709,10 @@ h3.editor__heading {
         border-radius: 3px;
         background: #5A6074;
     }
-    .button--dirty:nth-child(3):hover, .button--dirty:nth-child(3):focus {
+    .btn--dirty:nth-child(3):hover, .btn--dirty:nth-child(3):focus {
         margin-left: 90px;
     }
-    .button--dirty:nth-child(3):hover::after, .button--dirty:nth-child(3):focus::after {
+    .btn--dirty:nth-child(3):hover::after, .btn--dirty:nth-child(3):focus::after {
         content: "Change View";
         position: absolute;
         top: 0;
@@ -712,7 +722,7 @@ h3.editor__heading {
         background: #5A6074;
         width: max-content;
     }
-    .button.button--dirty {
+    .btn.btn--dirty {
         background: var(--grey);
     }
 }
@@ -730,7 +740,7 @@ h3.editor__heading {
         font-size: 15px;
         line-height: 18px;
     }
-    .button.button--dirty {
+    .btn.btn--dirty {
         background: var(--grey);
         border: 0;
         color: #ffffff;
@@ -742,7 +752,7 @@ h3.editor__heading {
     }
 }
 
-/* start media querie for header button screen min-width: 900 and max-height: 439px ---------------------- */
+/* start media querie for header buttons screen min-width: 900 and max-height: 439px ---------------------- */
 
 @media (min-width: 900px) and (max-height: 439px) {
     .pen {

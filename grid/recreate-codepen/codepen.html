@@ -11,32 +11,32 @@
 
 <body>
 
-    <div class="codepen">
+    <div class="l-codepen l-codepen--mobileFirst l-codepen--@md l-codepen--@lg">
 
         <!-- ----------------------------------------header-start ----------------------------------------------------->
-        <header class="pen">
-            <p><a href="https://codepen.io" target="blank"><i class="fab fa-codepen"></i></a></p>
+        <header class="pen l-pen--flex u-zIndex">
+            <p class="pen__logo"><a href="https://codepen.io" target="blank"><i class="fab fa-codepen"></i></a></p>
             <div class="pen__details">
                 <h1>Some Amazing Pen Name <a href="#"><i class="fas fa-pen"></i></a></h1>
                 <div class="pen__author">
                     <p><span>A PEN BY</span> <a href="https://codepen.io/DanSmaR" target="blank"> DanSmaR</a></p>
                 </div>
             </div>
-            <div class="button--header">
-                <div class="invisible--button"></div>
-                <button class="button toggle--header--button"><i class="fas fa-bars"></i><i
+            <div class="pen__btn">
+                <div class="is-hidden-btn"></div>
+                <button class="btn toggle--header--btn js-btn--toggler"><i class="fas fa-bars"></i><i
                         class="fas fa-chevron-down"></i></button>
 
-                <ul>
-                    <button class="button button--dirty"><i class="fas fa-cloud"></i><span class="button--text">
+                <ul class="pen__dropdown-btn js-pen__dropdown-btn">
+                    <button class="btn btn--dirty"><i class="fas fa-cloud"></i><span class="btn--text">
                             Save</span></button>
-                    <button class="button button--dirty"><i class="fas fa-cog"></i><span class="button--text">
+                    <button class="btn btn--dirty"><i class="fas fa-cog"></i><span class="btn--text">
                             Settings</span></button>
-                    <button class="button button--dirty ">👀 <span class="button--text">Change View</span></button>
-                    <button class="button pin--button"><i class="fas fa-thumbtack"></i> <i
+                    <button class="btn btn--dirty ">👀 <span class="btn--text">Change View</span></button>
+                    <button class="btn pin--btn"><i class="fas fa-thumbtack"></i> <i
                             class="fas fa-chevron-down"></i></button>
                 </ul>
-                <img src="image/perfilFoto-47w.png" class="image" alt="Danilo Martins Photo profile">
+                <img src="image/perfilFoto-47w.png" class="pen__profile-img" alt="Danilo Martins Photo profile">
             </div>
         </header>
 
@@ -48,9 +48,9 @@
             <!-- -----------------------------------HTML editor start ----------------------------------------------- -->
             <div class="editor editor--html" id="html">
                 <header class="editor__header">
-                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
+                    <button class="btn btn--small editor__settings"><i class="fas fa-cog"></i></button>
                     <h3 class="editor__heading">HTML</h3>
-                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
+                    <button class="btn btn--small editor__settings"><i class="fas fa-chevron-down"></i></button>
                 </header>
                 <div class="editor__code">
                     <div class="editor__gutter"><span class="editor__number">1</span></div>
@@ -62,9 +62,9 @@
             <!-- -------------------------CSS editor start--------------------------------------------- -->
             <div class="editor editor--css"id="css">
                 <header class="editor__header">
-                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
+                    <button class="btn btn--small editor__settings"><i class="fas fa-cog"></i></button>
                     <h3 class="editor__heading">CSS</h3>
-                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
+                    <button class="btn btn--small editor__settings"><i class="fas fa-chevron-down"></i></button>
                 </header>
                 <div class="editor__code">
                     <div class="editor__gutter">
@@ -82,9 +82,9 @@
             <!-- --------------------JS editor start ----------------------------------------------------- -->
             <div class="editor editor--js" id="js">
                 <header class="editor__header">
-                    <button class="button button--small editor__settings"><i class="fas fa-cog"></i></button>
+                    <button class="btn btn--small editor__settings"><i class="fas fa-cog"></i></button>
                     <h3 class="editor__heading">JS</h3>
-                    <button class="button button--small editor__settings"><i class="fas fa-chevron-down"></i></button>
+                    <button class="btn btn--small editor__settings"><i class="fas fa-chevron-down"></i></button>
                 </header>
                 <div class="editor__code">
                     <div class="editor__gutter">
@@ -109,11 +109,11 @@
 
         <!------------------------------------------------- footer start ------------------------------------------------>
         <footer class="footer--settings">
-            <button class="button button--small toggle--footer--button"><i class="fas fa-chevron-up"></i></button>
+            <button class="btn btn--small toggle--footer--btn"><i class="fas fa-chevron-up"></i></button>
             <ul>
-                <button class="button button--small button--black">Console
-                </button><button class="button button--small button--black">Assets
-                </button><button class="button button--small button--black">Shortcuts</button>
+                <button class="btn btn--small btn--black">Console
+                </button><button class="btn btn--small btn--black">Assets
+                </button><button class="btn btn--small btn--black">Shortcuts</button>
             </ul>
         </footer>
         <!------------------------------------------- footer end -------------------------------------------------------->
@@ -126,16 +126,16 @@
     <script>
 
         $(function () {
-            $('.toggle--header--button').on('click', function () {
-                $('.button--header ul').toggleClass('open');
-                $('.toggle--header--button .fas.fa-chevron-down').toggleClass('fa-rotate-180');
+            $('.toggle--header--btn').on('click', function () {
+                $('.js-pen__dropdown-btn').toggleClass('is-open');
+                $('.toggle--header--btn .fas.fa-chevron-down').toggleClass('fa-rotate-180');
             });
         });
 
         $(function () {
-            $('.toggle--footer--button').on('click', function () {
+            $('.toggle--footer--btn').on('click', function () {
                 $('.footer--settings ul').toggleClass('open');
-                $('.toggle--footer--button .fas.fa-chevron-up').toggleClass('fa-rotate-180');
+                $('.toggle--footer--btn .fas.fa-chevron-up').toggleClass('fa-rotate-180');
             });
         });
 
@@ -143,5 +143,5 @@
 
     </script>
     <!-- ----------------------------------------------drop-list script end----------------------------------------- -->
-
+</body>
 </html>
