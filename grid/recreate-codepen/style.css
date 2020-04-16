@@ -190,50 +190,158 @@ p {
 /* Buttons ----------------------------------------mobile first---------------------------------------------------*/
 
 .btn {
-    background: var(--grey);
     border: 0;
-    color: #ffffff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 15px;
-    position: relative;
-    cursor: pointer;
+    position: relative;    
 }
 
-.btn:hover, .btn:focus {
-    background: #5A6074;
+    .btn--pen-header {
+        background: var(--grey);
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 0.9375em;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .btn--pen-header:hover,
+    .btn--pen-header:focus {
+        background: #5A6074;
+    }
+
+    .btn__text {
+        display: none;
+    }
+
+    .btn--pinned {
+        padding: 8px 7px;
+        display: flex;
+        border-radius: 5px;
+    }
+
+    .btn--pinned-small {
+        background: #1E1F26;
+        font-size: 0.8em;
+        border: 2px solid #444857;
+    }
+        .btn--pinned-small:hover {
+            background: #5A6074;
+        }
+
+    .btn--pen-small {
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 2px;
+        background: var(--grey);
+    }
+
+        .btn--pen-small:hover {
+            background: #5A6074;
+        }
+
+    /* font awesome icon color of the buttons */
+    .fas--btn {
+        color: #ADAFBC;
+    }
+
+    .pen__btn--toggle {
+        z-index: 2;
+    }
+
+    .btn--pen-toggle {
+        background: #1E1F26;
+        border: 2px solid #444857;
+        padding: 8px 8px;
+        font-size: 0.8em;
+        border-radius: 5px;
+    }
+
+/*start of rules about button configurations for mobile-first design ----------------------------------------------- */
+
+@media (max-width: 767px) {
+    /*-------------------------------------- header--buttons -----------------------------------------------------------*/
+    .btn--pen-header:nth-child(1):hover::after, .btn--pen-header:nth-child(1):focus::after {
+        content: "Save";
+        position: absolute;
+        top: 0;
+        right: 85%;
+        padding: 5px;
+        border-radius: 3px;
+        background: #5A6074;
+    }
+    .btn--pen-header:nth-child(2):hover::after, .btn--pen-header:nth-child(2):focus::after {
+        content: "Settings";
+        position: absolute;
+        top: 0;
+        right: 85%;
+        padding: 5px;
+        border-radius: 3px;
+        background: #5A6074;
+    }
+    .btn--pen-header:nth-child(3):hover::after, .btn--pen-header:nth-child(3):focus::after {
+        content: "Change View";
+        position: absolute;
+        top: 0;
+        right: 85%;
+        padding: 5px;
+        border-radius: 3px;
+        background: #5A6074;
+        width: max-content;
+    }
+    /* footer-buttons -----------------------mobile first-----@media (max-width: 767px)-----------------------------------*/
+    .footer--settings {
+        background: #333642;
+        border-top: 1px solid rgb(109, 110, 116);
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: flex-start;
+        position: sticky;
+        bottom: 0;
+        align-self: stretch;
+    }
+    .footer--settings ul {
+        list-style: none;
+        display: none;
+    }
+    .footer--settings ul.open {
+        z-index: 0;
+        display: flex;
+        flex-flow: column-reverse;
+        margin: 0;
+        position: absolute;
+        padding: 0;
+        bottom: 104%;
+        left: 0;
+        border-top: 1px solid rgb(109, 110, 116);
+        border-right: 1px solid rgb(109, 110, 116);
+        animation-name: 'foot-settings-open';
+        animation-duration: 0.6s;
+    }
+    @keyframes foot-settings-open {
+        0% {
+            top: 304%;
+        }
+        100% {
+            top: 0%;
+        }
+    }
+    .btn--small.toggle--footer--btn {
+        z-index: 1;
+        padding: 3px 24px;
+        font-size: 1.2em;
+    }
+    .btn--black {
+        color: #ADAFBC;
+        padding: 8px;
+        background: #333642;
+        /* border-right: 1px solid rgb(109, 110, 116); */
+        font-size: 0.7em;
+    }
+    .btn--black:hover, .btn--black:focus {
+        background: #1e1f26;
+    }
 }
 
-.btn--text {
-    display: none;
-}
-
-.btn--small {
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 2px;
-}
-
-.pen .btn .fas {
-    color: #ADAFBC;
-}
-
-.pin--btn {
-    background: #1E1F26;
-    border: 2px solid #444857;
-    padding: 8px 7px;
-    font-size: 0.8em;
-    display: flex;
-}
-
-.toggle--header--btn {
-    background: #1E1F26;
-    border: 2px solid #444857;
-    padding: 8px 8px;
-    font-size: 0.8em;
-    z-index: 2;
-}
-
+/* --------------------- end of rules about button configurations for mobile first design --------------------------- */
 
 /* Editor---------------------------------------------mobile first----------------------------------------------- */
 
@@ -303,94 +411,6 @@ h3.editor__heading {
 .preview p {
     color: #ADAFBC;
 }
-
-/*start of rules about button configurations for mobile-first design ----------------------------------------------- */
-
-@media (max-width: 767px) {
-    /*-------------------------------------- header--buttons -----------------------------------------------------------*/
-    .btn--dirty:nth-child(1):hover::after, .btn--dirty:nth-child(1):focus::after {
-        content: "Save";
-        position: absolute;
-        top: 0;
-        right: 85%;
-        padding: 5px;
-        border-radius: 3px;
-        background: #5A6074;
-    }
-    .btn--dirty:nth-child(2):hover::after, .btn--dirty:nth-child(2):focus::after {
-        content: "Settings";
-        position: absolute;
-        top: 0;
-        right: 85%;
-        padding: 5px;
-        border-radius: 3px;
-        background: #5A6074;
-    }
-    .btn--dirty:nth-child(3):hover::after, .btn--dirty:nth-child(3):focus::after {
-        content: "Change View";
-        position: absolute;
-        top: 0;
-        right: 85%;
-        padding: 5px;
-        border-radius: 3px;
-        background: #5A6074;
-        width: max-content;
-    }
-    /* footer-buttons -----------------------mobile first-----@media (max-width: 767px)-----------------------------------*/
-    .footer--settings {
-        background: #333642;
-        border-top: 1px solid rgb(109, 110, 116);
-        display: flex;
-        flex-flow: column-reverse;
-        align-items: flex-start;
-        position: sticky;
-        bottom: 0;
-        align-self: stretch;
-    }
-    .footer--settings ul {
-        list-style: none;
-        display: none;
-    }
-    .footer--settings ul.open {
-        z-index: 0;
-        display: flex;
-        flex-flow: column-reverse;
-        margin: 0;
-        position: absolute;
-        padding: 0;
-        bottom: 104%;
-        left: 0;
-        border-top: 1px solid rgb(109, 110, 116);
-        border-right: 1px solid rgb(109, 110, 116);
-        animation-name: 'foot-settings-open';
-        animation-duration: 0.6s;
-    }
-    @keyframes foot-settings-open {
-        0% {
-            top: 304%;
-        }
-        100% {
-            top: 0%;
-        }
-    }
-    .btn--small.toggle--footer--btn {
-        z-index: 1;
-        padding: 3px 24px;
-        font-size: 1.2em;
-    }
-    .btn--black {
-        color: #ADAFBC;
-        padding: 8px;
-        background: #333642;
-        /* border-right: 1px solid rgb(109, 110, 116); */
-        font-size: 0.7em;
-    }
-    .btn--black:hover, .btn--black:focus {
-        background: #1e1f26;
-    }
-}
-
-/* --------------------- end of rules about button configurations for mobile first design --------------------------- */
 
 /* ------------------------------------------- End of rules for mobile-first-layout ------------------------------- */
 
@@ -766,24 +786,24 @@ h3.editor__heading {
         color: #ffffff;
         padding: 0px;
     }
-    .invisible--button {
+    .invisible--btn {
         display: none;
     }
-    .button--header ul {
+    .btn--header ul {
         display: block;
     }
-    .button--header ul>* {
+    .btn--header ul>* {
         margin-bottom: 0px;
     }
     .pen>p {
         font-size: 2em;
         margin: 0;
     }
-    .button--header .image {
+    .btn--header .image {
         width: 47px;
         height: 47px;
     }
-    .button {
+    .btn {
         background: var(--grey);
         border: 0;
         color: #ffffff;
@@ -793,7 +813,7 @@ h3.editor__heading {
         position: relative;
         cursor: pointer;
     }
-    .button--small {
+    .btn--small {
         font-size: 12px;
         padding: 2px 6px;
         border-radius: 2px;
@@ -803,26 +823,26 @@ h3.editor__heading {
         padding: 0;
         margin: 0;
     }
-    .button:hover, .button:focus {
+    .btn:hover, .btn:focus {
         background: #5A6074;
     }
-    .pen .button--dirty:hover, .pen .button--dirty:focus {
+    .pen .btn--dirty:hover, .pen .btn--dirty:focus {
         padding: 12px 17px;
         border: 3px solid var(--grey);
     }
-    .pen .button .fas {
+    .pen .btn .fas {
         color: #ADAFBC;
     }
-    .pin--button {
+    .pin--btn {
         display: initial;
         background: #1E1F26;
         border: 2px solid #444857;
         padding: 13px 10px;
     }
-    .button--text {
+    .btn--text {
         display: initial;
     }
-    .button--small.toggle--footer--button {
+    .btn--small.toggle--footer--btn {
         display: none;
     }
     h1, h2, h3 h4, h5, h6 {
@@ -834,14 +854,14 @@ h3.editor__heading {
         margin: 0;
         font-size: 0.9em;
     }
-    .button--black {
+    .btn--black {
         color: #ADAFBC;
         padding: 8px;
         background: #333642;
         border-right: 1px solid rgb(109, 110, 116);
         font-size: 0.7em;
     }
-    .button--black:hover, .button--black:focus {
+    .btn--black:hover, .btn--black:focus {
         background: #1e1f26;
     }
 }
@@ -862,7 +882,7 @@ h3.editor__heading {
         color: #ffffff;
         padding: 0px;
     }
-    .button {
+    .btn {
         background: var(--grey);
         border: 0;
         color: #ffffff;
@@ -872,21 +892,21 @@ h3.editor__heading {
         position: relative;
         cursor: pointer;
     }
-    .toggle--header--button {
+    .toggle--header--btn {
         display: none;
         padding: 0;
         margin: 0;
     }
-    .button--header ul {
+    .btn--header ul {
         display: block;
     }
-    .invisible--button {
+    .invisible--btn {
         display: none;
     }
-    .button--header ul>* {
+    .btn--header ul>* {
         margin-bottom: 0px;
     }
-    .pin--button {
+    .pin--btn {
         display: initial;
         background: #1E1F26;
         border: 2px solid #444857;
@@ -905,19 +925,19 @@ h3.editor__heading {
         margin: 0;
         font-size: 0.9em;
     }
-    .button--small {
+    .btn--small {
         font-size: 12px;
         padding: 2px 6px;
         border-radius: 2px;
     }
-    .button--black {
+    .btn--black {
         color: #ADAFBC;
         padding: 8px;
         background: #333642;
         border-right: 1px solid rgb(109, 110, 116);
         font-size: 0.7em;
     }
-    .button--black:hover, .button--black:focus {
+    .btn--black:hover, .btn--black:focus {
         background: #1e1f26;
     }
 }
