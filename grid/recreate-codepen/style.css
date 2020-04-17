@@ -873,7 +873,7 @@ h3.editor__heading {
 
 @media (min-width: 900px) and (min-height: 440px) {
 
-    
+
 
 }
 
@@ -995,5 +995,6 @@ h3.editor__heading {
 /*         color: #ffffff;
         padding: 0px; */
     }
+}
 
     /* end media queries for header and footers buttons screen min-width: 768px and max-width: 900px and max-height: 439px */
