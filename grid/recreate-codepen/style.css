@@ -469,6 +469,7 @@ h3.editor__heading {
 
 @media (min-width: 768px) and (max-height: 439px) {
 
+   
     .is-hidden-btn {
         position: absolute;
         width: 60%;
@@ -606,6 +607,15 @@ h3.editor__heading {
         grid-template-columns: 1fr;
         grid-template-rows: auto minmax(300px, 2fr) 1fr auto;
     }
+    
+    .pen__author>p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    .pen__author span {
+        color: #939DA8;
+        font-size: 0.9em;
+    }
     /* Editor --------------------@media (min-width: 768px) and min-height: 440px------------------------------------- */
     .code {
         display: grid;
@@ -701,6 +711,7 @@ h3.editor__heading {
     
     .pen__dropdown-btn {
         display: flex;
+        margin: 8px 0;
     }
     
     .pen__dropdown-btn > * {
@@ -811,6 +822,10 @@ h3.editor__heading {
 
 @media (min-width: 900px) and (max-height: 439px) {
 
+    h1, h2, h3 h4, h5, h6 {
+        font-size: 1.1rem;
+    }
+    
      .pen {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -818,6 +833,17 @@ h3.editor__heading {
         align-items: center;
         grid-gap: 10px;
     }
+    
+    .pen__author>p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    
+    .pen__author span {
+        color: #939DA8;
+        font-size: 0.9em;
+    }
+    
     .is-hidden-btn {
         position: absolute;
         width: 49%;
@@ -837,14 +863,6 @@ h3.editor__heading {
     .btn--header .image {
         width: 47px;
         height: 47px;
-    }
-
-    h1, h2, h3 h4, h5, h6 {
-        font-size: 1.1rem;
-    }
-    .pen__author>p {
-        margin: 0;
-        font-size: 0.9em;
     }
 }
 
