@@ -4,6 +4,14 @@
 
 :root {
     --grey: #444857;
+    --bd-color-default: #444857;
+    --bd-color-btn-drop: rgb(109, 110, 116);
+    --bg-color-default: #444857;
+    --bg-color-dark: #1E1F26;
+    --bg-color-foot: #333642;
+    --bg-color-hover: #5A6074;
+    --text-color-default: #ffffff;
+    --text-color-icon: #ADAFBC;
 }
 
 html {
@@ -12,7 +20,7 @@ html {
     font-weight: normal;
     color: #272727;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-    background: #444857;
+    background: var(--bg-color-default);
 }
 
 *, *::before, *::after {
@@ -30,7 +38,7 @@ h1, h2, h3 h4, h5, h6 {
 }
 
 a {
-    color: #ffffff;
+    color: var();
     text-decoration: none;
 }
 
@@ -50,7 +58,7 @@ p {
 .l-codepen {
     min-width: 325px;
     min-height: 100vh;
-    color: #ffffff;
+    color: var(--text-color-default);
     position: relative; 
 }
 
@@ -79,8 +87,8 @@ p {
 }    
 
 .pen {
-    background: #1E1F26;
-    color: #ffffff;
+    background: var(--bg-color-dark);
+    color: var(--text-color-default);
 }
 
     .pen__logo {
@@ -159,7 +167,7 @@ p {
         flex: 1 1 auto;
         display: grid;
         grid-template-rows: repeat(3, minmax(200px, 1fr));
-        background: #333642;
+        background: var(--bg-color-foot);
         grid-gap: 10px;
         border-bottom: 15px solid #333642;
     }
@@ -195,8 +203,8 @@ p {
 }
 
     .btn--pen-header {
-        background: var(--grey);
-        color: #ffffff;
+        background: var(--bg-color-default);
+        color: var(--text-color-default);
         cursor: pointer;
         font-size: 0.9375em;
         padding: 5px;
@@ -205,7 +213,7 @@ p {
 
     .btn--pen-header:hover,
     .btn--pen-header:focus {
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
 
     .btn__text {
@@ -220,21 +228,21 @@ p {
     }
 
     .btn--pinned-small {
-        background: #1E1F26;
+        background: var(--bg-color-dark);
         font-size: 0.8em;
-        border: 2px solid #444857;
+        border: 2px solid var(--bd-color-default);
     }
         .btn--pinned-small:hover {
-            background: #5A6074;
+            background: var(--bg-color-hover);
         }
 
     .btn--pen {
         border-radius: 2px;
-        background: var(--grey);
+        background: var(--bg-color-default);
     }
 
         .btn--pen:hover {
-            background: #5A6074;
+            background: var(--bg-color-hover);
         }
     
     .btn--pen-small {
@@ -244,7 +252,7 @@ p {
 
     /* font awesome icon color of the buttons */
     .fas--btn {
-        color: #ADAFBC;
+        color: var(--text-color-icon);
     }
 
     /* ********************************** END BUTTONS - MOBILE FIRST *********************************************** */
@@ -278,7 +286,7 @@ h3.editor__heading {
     resize: none;
     background: none;
     border: 0;
-    color: #ffffff;
+    color: var(--text-color-default);
     font-size: 10px;
     line-height: 18px;
 }
@@ -301,7 +309,7 @@ h3.editor__heading {
 }
 
 .preview p {
-    color: #ADAFBC;
+    color: var(--text-color-icon);
 }
 
 /* ************************************************ END MOBILE FIRST ************************************************* */
@@ -330,7 +338,7 @@ h3.editor__heading {
         z-index: 2;
         top: -8px;
         left: 1px;
-        background: #1E1F26;
+        background: var(--bg-color-dark);
     }
 
     .pen__btn--toggle {
@@ -338,15 +346,15 @@ h3.editor__heading {
     }
 
     .btn--pen-toggle {
-        background: #1E1F26;
-        border: 2px solid #444857;
+        background: var(--bg-color-dark);
+        border: 2px solid var(--bd-color-default);
         padding: 8px 8px;
         font-size: 0.8em;
         border-radius: 5px;
     }
 
         .btn--pen-toggle:hover {
-            background: #5A6074;
+            background: var(--bg-color-hover);
         }
 
     .pen__dropdown-btn {
@@ -390,7 +398,7 @@ h3.editor__heading {
         right: 85%;
         padding: 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
 
     .btn--pen-header:nth-child(2):hover::after,
@@ -401,7 +409,7 @@ h3.editor__heading {
         right: 85%;
         padding: 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
 
     .btn--pen-header:nth-child(3):hover::after,
@@ -412,7 +420,7 @@ h3.editor__heading {
         right: 85%;
         padding: 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
         width: max-content;
     }
 
@@ -431,8 +439,8 @@ h3.editor__heading {
     }
 
     .footer--codepen {
-        background: #333642;
-        border-top: 1px solid rgb(109, 110, 116);
+        background: var(--bg-color-foot);
+        border-top: 1px solid var(--bd-color-btn-drop);
     }
     
     .footer__dropdown-btn {
@@ -449,8 +457,8 @@ h3.editor__heading {
         padding: 0;
         bottom: 104%;
         left: 0;
-        border-top: 1px solid rgb(109, 110, 116);
-        border-right: 1px solid rgb(109, 110, 116);
+        border-top: 1px solid var(--bd-color-btn-drop);
+        border-right: 1px solid var(--bd-color-btn-drop);
         animation-name: 'foot-settings-open';
         animation-duration: 0.6s;
     }
@@ -471,14 +479,14 @@ h3.editor__heading {
     }
 
     .btn--drop-menu {
-        color: #ADAFBC;
+        color: var(--text-color-icon);
         padding: 8px;
-        background: #333642;
+        background: var(--bg-color-foot);
         font-size: 0.7em;
     }
 
     .btn--drop-menu:hover, .btn--drop-menu:focus {
-        background: #1e1f26;
+        background: var(--bg-color-dark);
     }
 }
 
@@ -528,12 +536,12 @@ h3.editor__heading {
     }
 
     .btn--pen-header {
-        background: #1E1F26;
+        background: var(--bg-color-dark);
     }
 
         .btn--pen-header:hover,
         .btn--pen-header:focus {
-            background: #5A6074;
+            background: var(--bg-color-hover);
         }
 }
 
@@ -561,7 +569,7 @@ h3.editor__heading {
         z-index: 2;
         top: -8px;
         left: 1px;
-        background: #1E1F26;
+        background: var(--bg-color-dark);
     }
 
     .pen__btn--toggle {
@@ -569,15 +577,15 @@ h3.editor__heading {
     }
 
     .btn--pen-toggle {
-        background: #1E1F26;
-        border: 2px solid #444857;
+        background: var(--bg-color-dark);
+        border: 2px solid var(--bd-color-default);
         padding: 8px 8px;
         font-size: 0.8em;
         border-radius: 5px;
     }
 
         .btn--pen-toggle:hover {
-            background: #5A6074;
+            background: var(--bg-color-hover);
         }
 
         .pen__dropdown-btn {
@@ -620,7 +628,7 @@ h3.editor__heading {
         right: 85%;
         padding: 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
     .btn--pen-header:nth-child(2):hover::after, .btn--pen-header:nth-child(2):focus::after {
         content: "Settings";
@@ -629,7 +637,7 @@ h3.editor__heading {
         right: 85%;
         padding: 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
     .btn--pen-header:nth-child(3):hover::after, .btn--pen-header:nth-child(3):focus::after {
         content: "Change View";
@@ -638,7 +646,7 @@ h3.editor__heading {
         right: 85%;
         padding: 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
         width: max-content;
     }
 
@@ -663,8 +671,8 @@ h3.editor__heading {
     }
 
     .footer--codepen {
-        background: #333642;
-        border-top: 1px solid rgb(109, 110, 116);
+        background: var(--bg-color-foot);
+        border-top: 1px solid var(--bd-color-btn-drop);
     }
 
     .footer__dropdown-btn {
@@ -673,15 +681,15 @@ h3.editor__heading {
         list-style: none;
     }
     .btn--drop-menu {
-        color: #ADAFBC;
+        color: var(--text-color-icon);
         padding: 8px;
-        background: #333642;
-        border-right: 1px solid rgb(109, 110, 116);
+        background: var(--bg-color-foot);
+        border-right: 1px solid var(--bd-color-btn-drop);
         font-size: 0.7em;
     }
 
         .btn--drop-menu:hover, .btn--drop-menu:focus {
-            background: #1e1f26;
+            background: var(--bg-color-dark);
         }
 }
 
@@ -788,7 +796,7 @@ h3.editor__heading {
     }
 
     .btn--pen-header {
-        background: var(--grey);
+        background: var(--bg-color-default);
         padding: 15px 20px;
     }
     
@@ -808,8 +816,8 @@ h3.editor__heading {
 
     .footer {
         grid-area: 4 / 1 / 5 / -1;
-        background: #333642;
-        border-top: 1px solid rgb(109, 110, 116);
+        background: var(--bg-color-foot);
+        border-top: 1px solid var(--bd-color-btn-drop);
         position: sticky;
         bottom: 0;
         align-self: stretch;
@@ -831,15 +839,15 @@ h3.editor__heading {
     }
 
     .btn--drop-menu {
-        color: #ADAFBC;
+        color: var(--text-color-icon);
         padding: 8px;
-        background: #333642;
-        border-right: 1px solid rgb(109, 110, 116);
+        background: var(--bg-color-foot);
+        border-right: 1px solid var(--bd-color-btn-drop);
         font-size: 0.7em;
     }
 
         .btn--drop-menu:hover, .btn--drop-menu:focus {
-            background: #1e1f26;
+            background: var(--bg-color-dark);
         }
 }
 
@@ -901,7 +909,7 @@ h3.editor__heading {
         right: 85%;
         padding: 15px 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
 
     .btn--pen-header:nth-child(2):hover,
@@ -917,7 +925,7 @@ h3.editor__heading {
         right: 85%;
         padding: 15px 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
     }
 
     .btn--pen-header:nth-child(3):hover,
@@ -933,7 +941,7 @@ h3.editor__heading {
         right: 85%;
         padding: 15px 5px;
         border-radius: 3px;
-        background: #5A6074;
+        background: var(--bg-color-hover);
         width: max-content;
     }
 
@@ -988,9 +996,9 @@ h3.editor__heading {
         }
 
     .btn--pen-header {
-        background: var(--grey);
+        background: var(--bg-color-default);
         border: 0;
-        color: #ffffff;
+        color: var(--text-color-default);
         padding: 15px 20px;
         border-radius: 5px;
         font-size: 15px;
@@ -1052,7 +1060,7 @@ h3.editor__heading {
         z-index: 2;
         top: -47%;
         left: 1px;
-        background: #1E1F26;
+        background: var(--bg-color-dark);
     }
 
     .pen__logo {
