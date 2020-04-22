@@ -122,7 +122,7 @@ img {
     grid-gap: 10px;
     padding: 0;
     list-style: none;
-    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(160px, 1fr));
 }
 
 .menu a {
@@ -170,8 +170,9 @@ img {
   background-color: #ffffff;
   padding: 50px;
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
+  justify-items: center;
 }
 
 /* Gallery */
