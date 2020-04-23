@@ -73,15 +73,15 @@ img {
     ;
 }
 
-    .ga-hero {
+    .hero.u-grid__area {
       grid-area: hero;
     }
 
-    .ga-cta1 {
+    .cta__1.u-grid__area {
       grid-area: cta1;
     }
 
-    .ga-cta2 {
+    .cta__2.u-grid__area {
       grid-area: cta2;
     }
 
